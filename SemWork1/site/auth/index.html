@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../auth/style.css" type="text/css" />
+        <title>Authorize</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo_box">
+                <a href="http://localhost:1488/" class="logotype3">                        
+                    <b>RUS</b>schools
+                    <div>школы России</div>
+                </a>
+            </div>
+        </div>
+        <div class="center_content">
+            <div class="container">
+                <h1>Welcome</h1>
+                <form class="form" action="/users/auth" method="post">
+                    <input class="input_text" type="text" name="Login" placeholder="Login">
+                    <input class="input_text" type="password" name="Password" placeholder="Password">
+                    <div class="rememberme">
+                        <input type="checkbox" name="checkbox"/>
+                        Remember me
+                    </div>
+                    <button type="submit" id="login-button">Login</button>
+                </form>
+                <div class="register">
+                    First time here? 
+                    <a href="http://localhost:1488/users/register">Register</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sad">
+                <img class="bottom_logo" src="../auth/img/ls2.jpg">
+                <div class="bottom_credits">
+                    <a href="/">About us</a>
+                    <br>
+                    RUSschools, all rights reserved.
+                </div>
+            </div>
+            <div class="footer_text">
+                2022 © Рафаэль Ишмухаметов<br>
+                <div>
+                    Коммерческое использование материалов сайта RUSSCHOOLS.RU запрещено. 
+                    <br>В остальных случаях 
+                    обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу, содержащую этот материал. 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

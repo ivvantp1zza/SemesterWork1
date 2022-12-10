@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../templates/schoolprofile/style.css" type="text/css" />
+    <title>School Profile</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo_box">
+            <a href="http://localhost:1488/" class="logotype3">
+                <b>RUS</b>schools
+                <div>школы России</div>
+            </a>
+        </div>
+    </div>
+    <div class="center_content">
+        <div class="profile_card">
+            <div class="school_credits">
+                <div class="avatar">
+                    <img src="../templates/schoolprofile/img/school.png" class="rounded-circle" width="120">
+                </div>
+                <div class="info">
+                    <div>{{school.name}}</div>
+                    <div>{{school.city}}</div>
+                    <div>Rating: {{school.rating}}</div>
+                </div>
+            </div>
+            <div class="events">
+                <div class="event_h">События</div>
+                {{for event in events}}
+                <div class="event">
+                    <div class="event_header">
+                        <div class="event_credits">
+                            <div>{{event.name}}</div>
+                        </div>
+                        <div>Дата: {{event.date}}</div>
+                    </div>
+                    <div class="event_content">{{event.description}}</div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="sad">
+            <img class="bottom_logo" src="../img/ls2.jpg">
+            <div class="bottom_credits">
+                <a href="/">About us</a>
+                <br>
+                RUSschools, all rights reserved.
+            </div>
+        </div>
+        <div class="footer_text">
+            2022 © Рафаэль Ишмухаметов<br>
+            <div>
+                Коммерческое использование материалов сайта RUSSCHOOLS.RU запрещено.
+                <br>В остальных случаях
+                обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу, содержащую этот материал.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

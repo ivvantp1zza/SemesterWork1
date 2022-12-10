@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../templates/profile/style.css" type="text/css" />
+        <title>Profile</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo_box">
+                <a href="http://localhost:1488/" class="logotype3">
+                    <b>RUS</b>schools
+                    <div>школы России</div>
+                </a>
+            </div>
+            <div class="header_user_menu">
+            </div>
+        </div>
+        <div class="center_content">
+            <div class="profile_card">
+                <div class="avatar">
+                    {{ if user.sex == "Male" }}
+                    <img src="../templates/profile/img/maleavatar.png" class="rounded-circle" width="120">
+                    {{ else }}
+                    <img src="../templates/profile/img/femaleavatar.png" class="rounded-circle" width="120">
+                    {{ end }}
+                </div>
+                <div class="info">
+                    <div>{{user.login}}</div>
+                    <div>{{user.email}}</div>
+                    <div>{{user.city}}</div>
+                    <div>Posts amount: {{user.posts_amount}}</div>
+                </div>
+                <a class="edit_btn" href="../users/edit">Edit</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sad">
+                <img class="bottom_logo" src="../img/ls2.jpg">
+                <div class="bottom_credits">
+                    <a href="/">About us</a>
+                    <br>
+                    RUSschools, all rights reserved.
+                </div>
+            </div>
+            <div class="footer_text">
+                2022 © Рафаэль Ишмухаметов<br>
+                <div>
+                    Коммерческое использование материалов сайта RUSSCHOOLS.RU запрещено. 
+                    <br>В остальных случаях 
+                    обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу, содержащую этот материал. 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

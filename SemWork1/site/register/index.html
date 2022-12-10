@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../register/style.css" type="text/css" />
+        <title>Register</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo_box">
+                <a href="http://localhost:1488/" class="logotype3">                        
+                    <b>RUS</b>schools
+                    <div>школы России</div>
+                </a>
+            </div>
+        </div>
+        <div class="center_content">
+            <div class="container">
+                <h1>Registration</h1>
+                <form class="form" action="/users/register" method="post">
+                    <input class="input_text" type="text"
+                    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                    required title="test@smth.smth" name="Email" placeholder="Email">
+                    <input class="input_text" required type="text" name="City" placeholder="City">
+                    <select name="Sex">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <input class="input_text" required type="text" name="Login" placeholder="Login">
+                    <input class="input_text" type="text" 
+                           pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,20})$" 
+                           required title="пароль должен содержать от 6 до 20 символов, по крайней мере одну цифру, одну прописную букву и одну строчную букву" name="Password" placeholder="Password">
+                    <button type="submit" id="login-button">Submit</button>
+                </form>
+                <div class="register">
+                    Already got account? 
+                    <a href="http://localhost:1488/users/auth">Login</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sad">
+                <img class="bottom_logo" src="../register/img/ls2.jpg">
+                <div class="bottom_credits">
+                    <a href="/">About us</a>
+                    <br>
+                    RUSschools, all rights reserved.
+                </div>
+            </div>
+            <div class="footer_text">
+                2022 © Рафаэль Ишмухаметов<br>
+                <div>
+                    Коммерческое использование материалов сайта RUSSCHOOLS.RU запрещено. 
+                    <br>В остальных случаях 
+                    обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу, содержащую этот материал. 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style.css" type="text/css" />
+        <title>General</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo_box">
+                <a href="http://localhost:1488/" class="logotype3">                        
+                    <b>RUS</b>schools
+                    <div>школы России</div>
+                </a>
+            </div>
+            <div class="header_user_menu">
+                <a href="http://localhost:1488/explorer/all">Explorer</a>
+                <a class="news_btn" href="http://localhost:1488/news">News</a>
+                <a href="http://localhost:1488/users/profile">Profile</a>
+                {{if isauth == false }}
+                <a href="http://localhost:1488/users/auth" class="login_btn">Login</a>
+                {{else}}
+                <a href="http://localhost:1488/users/logout" class="login_btn">Logout</a>
+                {{end}}
+
+            </div>
+        </div>
+        <div class="center_content">
+            <div class="circle_cont">
+                <img src="img/ls2.jpg">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sad">
+                <img class="bottom_logo" src="../register/img/ls2.jpg">
+                <div class="bottom_credits">
+                    <a href="/">About us</a>
+                    <br>
+                    RUSschools, all rights reserved.
+                </div>
+            </div>
+            <div class="footer_text">
+                2022 © Рафаэль Ишмухаметов<br>
+                <div>
+                    Коммерческое использование материалов сайта RUSSCHOOLS.RU запрещено. 
+                    <br>В остальных случаях 
+                    обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу, содержащую этот материал. 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

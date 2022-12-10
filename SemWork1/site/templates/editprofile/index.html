@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../templates/editprofile/style.css" type="text/css" />
+        <title>Profile</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo_box">
+                <a href="http://localhost:1488/" class="logotype3">
+                    <b>RUS</b>schools
+                    <div>школы России</div>
+                </a>
+            </div>
+            <div class="header_user_menu">
+            </div>
+        </div>
+        <div class="center_content">
+            <div class="profile_card">
+                <div class="avatar">
+                    {{ if user.sex == "Male" }}
+                    <img src="../templates/editprofile/img/maleavatar.png" class="rounded-circle" width="120">
+                    {{ else }}
+                    <img src="../templates/editprofile/img/femaleavatar.png" class="rounded-circle" width="120">
+                    {{ end }}
+                </div>
+                <div class="info">
+                    <form action="/users/profile" method="post">
+                        <input type="text" name="Login" value="{{user.login}}">
+                        <input type="email" name="Email" value="{{user.email}}">
+                        <input type="text" name="City" value="{{user.city}}">
+                        <input type="password" name="Password" value="{{user.password}}" />
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sad">
+                <img class="bottom_logo" src="../img/ls2.jpg">
+                <div class="bottom_credits">
+                    <a href="/">About us</a>
+                    <br>
+                    RUSschools, all rights reserved.
+                </div>
+            </div>
+            <div class="footer_text">
+                2022 © Рафаэль Ишмухаметов<br>
+                <div>
+                    Коммерческое использование материалов сайта RUSSCHOOLS.RU запрещено. 
+                    <br>В остальных случаях 
+                    обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу, содержащую этот материал. 
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
