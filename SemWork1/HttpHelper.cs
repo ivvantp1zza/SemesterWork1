@@ -115,6 +115,7 @@ namespace SemWork1
 
         public static Template? GetTemplate(string path)
         {
+            var p = "test";
             var fullPath = "..\\..\\..\\site" + path;
             var page = File.ReadAllText(fullPath);
             return Template.Parse(page);
